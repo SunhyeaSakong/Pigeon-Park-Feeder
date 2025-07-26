@@ -1,0 +1,28 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.localized
+
+# Editor/IDE Specific Files
+.vscode/        # Visual Studio Code
+.idea/          # IntelliJ IDEA / WebStorm
+*.sublime-project
+*.sublime-workspace
+.atom/          # Atom editor
+*.swp           # Vim swap files
+*.swo           # Vim swap files
+
+# macOS specific files
+.Spotlight-V100
+.Trashes
+__MACOSX
+
+# Windows specific files
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs and temporary files
+*.log
+*.tmp
+temp/
