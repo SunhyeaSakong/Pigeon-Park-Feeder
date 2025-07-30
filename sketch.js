@@ -9,6 +9,37 @@ let popcornBites = 0;
 let pigeonsFed = 0;
 
 
+function setup() {
+  createCanvas(windowWidth, windowHeight);  
+  // Full screen on all devices
+  for (let i = 0; i < 10; i++) {
+    pigeons.push(new Pigeon(random(width), random(height)));
+  }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  // make it reesponsive
+}
+window.addEventListener('load', () => {
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // Optionally: scale game objects based on new width/height
+  }
+
+  // Redraw after resize
+  ctx.fillStyle = 'skyblue';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();  //call initially
+});
+
 function preload() {
   pigeonImage = loadImage("pigeon.png"); // must be in same folder
   flyingImage = loadImage("Flying.png")
